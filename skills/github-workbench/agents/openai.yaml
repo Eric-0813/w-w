@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub 项目工作台"
+  short_description: "调研开源项目、核对仓库访问权限，并将检查后的本地项目上传到 GitHub"
+  default_prompt: "使用 $github-workbench 调研相关 GitHub 项目，或按我的要求整理并上传当前项目；明确区分已验证能力、待接入功能和上传结果。"
