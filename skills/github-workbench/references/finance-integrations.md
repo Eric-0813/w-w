@@ -1,6 +1,6 @@
-# Financial integrations and tactile interfaces
+# Financial integrations
 
-Use this checklist only when the repository research concerns financial applications or native button feedback. Verify current maintainer and provider documentation; names and API eligibility change.
+Use this checklist when researching financial applications, broker connectors, or financial multi-agent repositories. Verify current maintainer and provider documentation; names and API eligibility change. It evaluates integrations rather than performing securities or portfolio analysis.
 
 ## Identify the integration layer
 
@@ -23,8 +23,14 @@ Look for the actual data connectors and provenance handling, not merely analyst 
 
 Do not equate analyst agreement, confidence wording, GitHub popularity, or backtest results with future returns. For a first prototype, read-only or paper-mode integration often provides the most useful validation without requiring live transactions. Honor the user's requested scope rather than universally prohibiting legitimate execution features.
 
-## Native haptics versus web animation
+## Make the assessment reviewable
 
-A CSS press effect or sound is not physical haptic feedback. Verify current support for the target device, OS, browser, or native wrapper. An iOS-native haptics bridge may be required even when the existing app is web-based. Check plugin APIs and installation requirements rather than presenting an unsupported browser call as working vibration.
+For each serious candidate, record the supported market/account/region, data source and access requirements, integration layer, and remaining setup. Tie capability claims to an implementation file or current provider documentation. Label evidence as documented, inspected in code, locally tested, or unverified; use a commit permalink for inspected code.
 
-Tie feedback to precise events: button pressed, request accepted, report ready, order submitted, order filled. Never signal a fill merely because a request was sent. Report whether behavior was inspected in source, simulated, or tested on the actual phone. No actual device test means the physical feel remains unverified.
+When useful, summarize the evidence in this compact table:
+
+| Capability | Source / commit | Evidence level | Requirement or gap |
+| --- | --- | --- | --- |
+| Requested capability | Direct supporting link | Documented / inspected / tested / unverified | What is still needed |
+
+Distinguish unavailable data from an observed zero. A missing connector, delayed feed, untested paper environment, or undocumented account requirement stays visible in the conclusion. End with the smallest experiment that can resolve the remaining integration uncertainty within the user's requested scope.
