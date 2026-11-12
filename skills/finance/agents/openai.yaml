@@ -1,0 +1,4 @@
+interface:
+  display_name: "证券研究与持仓分析"
+  short_description: "核对证券与新闻来源，计算持仓市值和集中度，并说明数据时点及假设"
+  default_prompt: "使用 $finance 研究我指定的证券或持仓，核对来源与数据时点，给出可复算的结论和关键不确定性。"
